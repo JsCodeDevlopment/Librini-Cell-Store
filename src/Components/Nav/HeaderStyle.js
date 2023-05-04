@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const HeaderDiv = styled.div`
   display: flex;
-  width: 100vw;
+  width: 100%;
   background-color: var(--cor-dark);
   height: 10rem;
   padding: 1rem 20rem;

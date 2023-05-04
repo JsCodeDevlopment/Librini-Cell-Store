@@ -1,3 +1,4 @@
+import { Body } from "./Components/Body/Body";
 import { Header } from "./Components/Nav/Header";
 import { ResetCSS } from "./GlobalStyle";
 
@@ -6,6 +7,7 @@ function App() {
     <>
       <ResetCSS />
       <Header />
+      <Body/>
     </>
   );
 }

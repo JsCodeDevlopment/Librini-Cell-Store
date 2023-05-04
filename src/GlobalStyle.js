@@ -22,7 +22,7 @@ export const ResetCSS = createGlobalStyle`
     border: 0;
     box-sizing: border-box;
     font-size: 62.5%;
-    color: var(-color-text);
+    color: var(--cor-text);
     font-family: Kumbh Sans;
     text-decoration: none;
   }
@@ -37,7 +37,7 @@ export const GenericalDiv = styled.div`
   gap: 0.5rem;
 `;
 export const ProductTitle = styled.h1`
-  font-size: 5rem;
+  font-size: 3rem;
   color: #191919;
 `;
 export const NavItem = styled.p`
