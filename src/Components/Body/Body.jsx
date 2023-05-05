@@ -1,11 +1,21 @@
-import { ProductTitle } from "../../GlobalStyle";
+import { GenericalDiv, ProductTitle } from "../../GlobalStyle";
 import {
+  AddButton,
+  AddToCartButton,
+  AddToCartText,
   BodyDiv,
   CarrosselDiv,
+  CartImgOfButton,
+  MaxAndMinButton,
   MiniTitle,
+  OriginalValue,
   Paragraph,
+  ProductDescount,
   ProductInfoDiv,
+  ProductValue,
+  ValuesDiv,
 } from "./BodyStyle";
+import Cart from "../../assets/CARRINHO.png";
 
 export function Body() {
   return (
@@ -20,9 +30,20 @@ export function Body() {
           architecto modi asperiores mollitia exercitationem? Nostrum doloribus
           nihil laborum vero ad earum omnis!
         </Paragraph>
-        <div>
-          <p>Value</p> <span>Descount</span>
-        </div>
+        <ValuesDiv>
+          <ProductValue>R$ 9.879,99</ProductValue>
+          <ProductDescount>50%</ProductDescount>
+        </ValuesDiv>
+        <OriginalValue>R$ 19.759,98</OriginalValue>
+        <GenericalDiv>
+          <AddButton>
+            <MaxAndMinButton>-</MaxAndMinButton><ProductValue>0</ProductValue><MaxAndMinButton>+</MaxAndMinButton>
+          </AddButton>
+          <AddToCartButton>
+            <CartImgOfButton src={Cart} />
+            <AddToCartText>Add to cart</AddToCartText>
+          </AddToCartButton>
+        </GenericalDiv>
       </ProductInfoDiv>
     </BodyDiv>
   );

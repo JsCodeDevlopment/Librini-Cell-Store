@@ -34,11 +34,11 @@ export const Logo = styled.img`
 
 export const GenericalDiv = styled.div`
   display: flex;
-  gap: 0.5rem;
+  gap: 3rem;
 `;
 export const ProductTitle = styled.h1`
   font-size: 3rem;
-  color: #191919;
+  color: var(--cor-dark);
 `;
 export const NavItem = styled.p`
 a {
