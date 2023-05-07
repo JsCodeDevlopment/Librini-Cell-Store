@@ -4,6 +4,8 @@ export const BodyDiv = styled.div`
   width: 100%;
   min-height: 84vh;
   display: flex;
+  padding: 1rem;
+  gap: 3rem;
   justify-content: center;
   flex-wrap: wrap;
   align-items: center;

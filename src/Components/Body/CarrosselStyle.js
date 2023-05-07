@@ -2,13 +2,13 @@ import styled, { css } from "styled-components";
 
 export const Images = styled.img`
   ${() => css`
-border-radius: 1rem;
-`}
+    border-radius: 1rem;
+  `}
 `;
 const isActive = () => css`
   border: 2px solid #00d2da;
   &::before {
-    content: '';
+    content: "";
     position: absolute;
     width: 100%;
     height: 100%;
@@ -21,19 +21,33 @@ const isActive = () => css`
     opacity: 1;
     cursor: not-allowed;
   }
-`
+`;
 const setlightBoxVisible = () => css`
   opacity: 1;
   visibility: visible;
+`;
+
+const shadowLightbox = () => css`
+  &::after {
+    content: '';
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.75);
+  }
 `
 
 export const Container = styled.div`
-  ${({ theme }) => css`
+  ${({ theme, lightBoxVisible }) => css`
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     @media ${theme.media.laptop} {
+    ${lightBoxVisible && shadowLightbox()}
       border-radius: 2rem;
       max-width: 44.5rem;
       > ${ArrowPrevious}, > ${ArrowNext} {
@@ -44,7 +58,7 @@ export const Container = styled.div`
       max-width: 55.5rem;
     }
   `}
-`
+`;
 
 export const DisplayImage = styled.img`
   ${() => css`
@@ -53,13 +67,13 @@ export const DisplayImage = styled.img`
     cursor: pointer;
     user-select: none;
   `}
-`
+`;
 export const ArrowPrevious = styled.img`
   ${({ theme }) => css`
     display: grid;
     place-items: center;
     border-radius: 50%;
-    background-color: ${theme.colors.neutral.white};
+    background-color: var(--cor-text);
     position: absolute;
     z-index: 1;
     top: 50%;
@@ -67,13 +81,13 @@ export const ArrowPrevious = styled.img`
     transform: translateY(-50%);
     padding: 1.3rem 1.6rem;
   `}
-`
+`;
 export const ArrowNext = styled.img`
   ${({ theme }) => css`
     display: grid;
     place-items: center;
     border-radius: 50%;
-    background-color: ${theme.colors.neutral.white};
+    background-color: var(--cor-text);
     position: absolute;
     z-index: 1;
     top: 50%;
@@ -81,7 +95,7 @@ export const ArrowNext = styled.img`
     transform: translateY(-50%);
     padding: 1.3rem 1.6rem;
   `}
-`
+`;
 
 export const Trumbnails = styled.div`
   ${({ theme }) => css`
@@ -100,7 +114,7 @@ export const Trumbnails = styled.div`
       grid-template-columns: repeat(auto-fill, 10rem);
     }
   `}
-`
+`;
 export const Trumbnail = styled.div`
   ${({ theme, backgroundImage, active }) => css`
     @media ${theme.media.laptop} {
@@ -125,7 +139,7 @@ export const Trumbnail = styled.div`
       height: 10rem;
     }
   `}
-`
+`;
 
 export const LightBoxContainer = styled.div`
   ${({ theme, lightBoxVisible }) => css`
@@ -133,8 +147,9 @@ export const LightBoxContainer = styled.div`
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    max-width: 55rem;
+    max-width: 45rem;
     width: 100%;
+    max-height: 100vh;
 
     display: none;
     flex-direction: column;
@@ -144,16 +159,6 @@ export const LightBoxContainer = styled.div`
     opacity: 0;
     visibility: hidden;
 
-    &::before {
-      content: '';
-      position: absolute;
-      left: -100%;
-      top: -50%;
-      width: 300vh;
-      height: 300vh;
-      z-index: 1;
-      background-color: rgba(0, 0, 0, 0.75);
-    }
     @media ${theme.media.laptop} {
       ${lightBoxVisible && setlightBoxVisible()}
       display:flex;
@@ -174,14 +179,11 @@ export const LightBoxContainer = styled.div`
         transform: translate(50%, -50%);
       }
     }
-    @media ${theme.media.largeDesktop} {
-      max-width: 60rem;
-    }
     ${Trumbnail} {
       z-index: 3;
     }
   `}
-`
+`;
 export const CloseLightBox = styled.img`
   align-self: flex-end;
   width: 2rem;
@@ -190,11 +192,11 @@ export const CloseLightBox = styled.img`
   user-select: none;
   cursor: pointer;
   z-index: 2;
-`
+`;
 
 export const LightBoxImg = styled.img`
   width: 100%;
   border-radius: 1.5rem;
   user-select: none;
   z-index: 2;
-`
+`;

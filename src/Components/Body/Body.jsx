@@ -21,11 +21,9 @@ import { SliderImage } from "./Carrossel";
 export function Body() {
   return (
     <BodyDiv>
-      <CarrosselDiv>
-
-        <SliderImage/>
-
-      </CarrosselDiv>
+      {/* <CarrosselDiv> */}
+        <SliderImage />
+      {/* </CarrosselDiv> */}
       <ProductInfoDiv>
         <MiniTitle>LIBRINI CELL STORE</MiniTitle>
         <ProductTitle>iPhone 14 Pro Max</ProductTitle>
@@ -42,7 +40,9 @@ export function Body() {
         <OriginalValue>R$ 19.759,98</OriginalValue>
         <GenericalDiv>
           <AddButton>
-            <MaxAndMinButton>-</MaxAndMinButton><ProductValue>0</ProductValue><MaxAndMinButton>+</MaxAndMinButton>
+            <MaxAndMinButton>-</MaxAndMinButton>
+            <ProductValue>0</ProductValue>
+            <MaxAndMinButton>+</MaxAndMinButton>
           </AddButton>
           <AddToCartButton>
             <CartImgOfButton src={Cart} />

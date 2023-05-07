@@ -49,7 +49,7 @@ export const SliderImage = () => {
   }
 
   return (
-    <Styled.Container>
+    <Styled.Container lightBoxVisible={lightBoxVisible}>
       <Styled.DisplayImage
         onClick={() => setLightBoxVisible(true)}
         src={imagesList[currentImageIndex]}
