@@ -1,24 +1,29 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 export const HeaderDiv = styled.div`
-  display: flex;
-  width: 100%;
-  background-color: var(--cor-dark);
-  height: 10rem;
-  padding: 1rem 20rem;
-  gap: 10rem;
-  justify-content: start;
-  align-items: center;
+  ${() => css`
+    display: flex;
+    width: 100%;
+    background-color: var(--cor-dark);
+    min-height: 10rem;
+    padding: 1rem 20rem;
+    flex-wrap: wrap;
+    gap: 3rem;
+    justify-content: space-between;
+    align-items: center;
+    @media (max-width: 720px) {
+      padding: 10rem;
+    }
+  `}
 `;
 export const Div1 = styled.div`
   display: flex;
   gap: 1rem;
-  width: 50%;
+  flex-wrap: wrap;
 `;
 export const Div2 = styled.div`
   display: flex;
   gap: 3rem;
-  width: 50%;
   align-items: center;
   justify-content: end;
 `;

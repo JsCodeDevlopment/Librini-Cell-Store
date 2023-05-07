@@ -1,4 +1,4 @@
-import styled, { createGlobalStyle } from "styled-components";
+import styled, { createGlobalStyle, css } from "styled-components";
 
 /*
 CONFIG FONT
@@ -34,6 +34,7 @@ export const Logo = styled.img`
 
 export const GenericalDiv = styled.div`
   display: flex;
+  flex-wrap: wrap;
   gap: 3rem;
 `;
 export const ProductTitle = styled.h1`

@@ -1,10 +1,11 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 export const BodyDiv = styled.div`
   width: 100%;
-  height: 84vh;
+  min-height: 84vh;
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   align-items: center;
   background-color: var(--cor-back);
 `;
@@ -16,13 +17,15 @@ export const CarrosselDiv = styled.div`
 `;
 
 export const ProductInfoDiv = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: start;
-  gap: 1.5rem;
-  width: 30%;
-  height: 30%;
+  ${() => css`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 1.5rem;
+    width: 50%;
+    height: 30%;
+  `}
 `;
 export const MiniTitle = styled.span`
   font-size: 0.9rem;
@@ -56,29 +59,46 @@ export const AddToCartText = styled.p`
   color: var(--cor-text);
 `;
 export const CartImgOfButton = styled.img`
-width: 2rem;
-height: 2rem;
-`
+  ${() => css`
+    width: 2rem;
+    height: 2rem;
+  `}
+`;
 export const AddButton = styled.div`
-  display: flex;
-  width: 15rem;
-  height: 4.5rem;
-  align-items: center;
-  justify-content: space-around;
-  border-radius: 1rem;
-  background-color: var(--cor-text);
+  ${() => css`
+    display: flex;
+    width: 15rem;
+    height: 4.5rem;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 1rem;
+    background-color: var(--cor-text);
+    &:hover {
+      transform: scale(1.1);
+    }
+    @media (max-width: 720px) {
+      width: 10rem;
+      height: 4rem;
+    }
+  `}
 `;
 export const MaxAndMinButton = styled.h1`
-font-size: 3rem;
-color: var(--cor-complement);
-`
+  font-size: 3rem;
+  color: var(--cor-complement);
+`;
 export const AddToCartButton = styled.div`
-  display: flex;
-  gap: 1rem;
-  justify-content: center;
-  align-items: center;
-  border-radius: 1rem;
-  width: 21rem;
-  height: 4.5rem;
-  background-color: var(--cor-complement);
+  ${() => css`
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1rem;
+    width: 21rem;
+    height: 4.5rem;
+    background-color: var(--cor-complement);
+    @media (max-width: 720px) {
+      width: 16rem;
+      height: 4rem;
+    }
+  `}
 `;

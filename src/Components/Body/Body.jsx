@@ -16,11 +16,16 @@ import {
   ValuesDiv,
 } from "./BodyStyle";
 import Cart from "../../assets/CARRINHO.png";
+import { SliderImage } from "./Carrossel";
 
 export function Body() {
   return (
     <BodyDiv>
-      <CarrosselDiv>Carrossel</CarrosselDiv>
+      <CarrosselDiv>
+
+        <SliderImage/>
+
+      </CarrosselDiv>
       <ProductInfoDiv>
         <MiniTitle>LIBRINI CELL STORE</MiniTitle>
         <ProductTitle>iPhone 14 Pro Max</ProductTitle>
