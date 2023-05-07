@@ -6,7 +6,7 @@ border-radius: 1rem;
 `}
 `;
 const isActive = () => css`
-  border: 2px solid #ff7d1a;
+  border: 2px solid #00d2da;
   &::before {
     content: '';
     position: absolute;
@@ -19,7 +19,7 @@ const isActive = () => css`
   }
   &:hover {
     opacity: 1;
-    cursor: none;
+    cursor: not-allowed;
   }
 `
 const setlightBoxVisible = () => css`
@@ -32,7 +32,7 @@ export const Container = styled.div`
     position: relative;
     display: flex;
     flex-direction: column;
-    align-items: ;
+    align-items: center;
     @media ${theme.media.laptop} {
       border-radius: 2rem;
       max-width: 44.5rem;
@@ -48,7 +48,7 @@ export const Container = styled.div`
 
 export const DisplayImage = styled.img`
   ${() => css`
-    width: 100%;
+    width: 90%;
     border-radius: inherit;
     cursor: pointer;
     user-select: none;

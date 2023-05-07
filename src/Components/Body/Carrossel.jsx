@@ -3,6 +3,11 @@ import Img1 from "../../assets/PHONE1.png";
 import Img2 from "../../assets/PHONE2.png";
 import Img3 from "../../assets/PHONE3.png";
 import Img4 from "../../assets/PHONE4.png";
+import ImgClose from "../../assets/icon-close.svg";
+import ImgDelete from "../../assets/icon-delete.svg";
+import ImgMenu from "../../assets/icon-menu.svg";
+import ImgNext from "../../assets/icon-next.svg";
+import ImgPrevious from "../../assets/icon-previous.svg";
 import { useState } from 'react'
 import * as Styled from './CarrosselStyle'
 
@@ -51,12 +56,12 @@ export const SliderImage = () => {
       />
       <Styled.ArrowPrevious
         onClick={handleArrowPrevious}
-        src="/images/icon-previous.svg"
+        src={ImgPrevious}
         alt="previous image arrow"
       />
       <Styled.ArrowNext
         onClick={handleArrowNext}
-        src="/images/icon-next.svg"
+        src={ImgNext}
         alt="next image arrow"
       />
 
@@ -74,17 +79,17 @@ export const SliderImage = () => {
       <Styled.LightBoxContainer lightBoxVisible={lightBoxVisible}>
         <Styled.CloseLightBox
           onClick={() => setLightBoxVisible(false)}
-          src="/images/icon-close.svg"
+          src={ImgClose}
         />
         <Styled.LightBoxImg src={imagesList[currentImageIndex]} />
         <Styled.ArrowPrevious
           onClick={handleArrowPrevious}
-          src="/images/icon-previous.svg"
+          src={ImgPrevious}
           alt="previous image arrow"
         />
         <Styled.ArrowNext
           onClick={handleArrowNext}
-          src="/images/icon-next.svg"
+          src={ImgNext}
           alt="next image arrow"
         />
 
