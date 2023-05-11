@@ -21,9 +21,7 @@ import { SliderImage } from "./Carrossel";
 export function Body() {
   return (
     <BodyDiv>
-      {/* <CarrosselDiv> */}
         <SliderImage />
-      {/* </CarrosselDiv> */}
       <ProductInfoDiv>
         <MiniTitle>LIBRINI CELL STORE</MiniTitle>
         <ProductTitle>iPhone 14 Pro Max</ProductTitle>

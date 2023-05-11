@@ -98,6 +98,9 @@ export const AddToCartButton = styled.div`
     width: 21rem;
     height: 4.5rem;
     background-color: var(--cor-complement);
+    &:hover {
+      transform: scale(1.1);
+    }
     @media (max-width: 720px) {
       width: 16rem;
       height: 4rem;

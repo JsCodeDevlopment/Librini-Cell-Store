@@ -33,10 +33,13 @@ export const CartLogo = styled.img`
 `;
 
 export const ProfileImg = styled.img`
-${()=>css`
-&:hover{
-  border: solid 0.2rem var(--cor-complement);
-  border-radius: 100%;
-}
-`}
-`
+  ${() => css`
+    border: solid 0.2rem transparent;
+    border-radius: 100%;
+    transition: ease-in-out 0.3s;
+    &:hover {
+      border-color: var(--cor-complement);
+      cursor: pointer;
+    }
+  `}
+`;
