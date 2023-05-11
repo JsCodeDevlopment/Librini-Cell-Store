@@ -42,10 +42,27 @@ export const ProductTitle = styled.h1`
   color: var(--cor-dark);
 `;
 export const NavItem = styled.p`
-a {
-  font-size: 1.7rem;
-  color: var(--cor-text);
-}
-  font-size: 1.7rem;
-  color: var(--cor-text);
+  ${() => css`
+    a {
+      font-size: 1.7rem;
+      color: var(--cor-text);
+    }
+    font-size: 1.7rem;
+    color: var(--cor-text);
+    position: relative;
+    transition: 0.5s ease-in-out;
+
+    @media (min-width: 1000px) {
+      &:hover {
+        &::before {
+          content: "";
+          position: absolute;
+          top: 5.5rem;
+          width: 100%;
+          height: 0.5rem;
+          background-color: var(--cor-complement);
+        }
+      }
+    }
+  `}
 `;

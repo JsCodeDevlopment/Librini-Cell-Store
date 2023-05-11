@@ -6,7 +6,7 @@ export const HeaderDiv = styled.div`
     width: 100%;
     background-color: var(--cor-dark);
     min-height: 10rem;
-    padding: 1rem 20rem;
+    padding: 0 20rem;
     flex-wrap: wrap;
     gap: 3rem;
     justify-content: space-between;
@@ -31,3 +31,12 @@ export const CartLogo = styled.img`
   width: 3rem;
   height: 3rem;
 `;
+
+export const ProfileImg = styled.img`
+${()=>css`
+&:hover{
+  border: solid 0.2rem var(--cor-complement);
+  border-radius: 100%;
+}
+`}
+`

@@ -1,5 +1,5 @@
 import { NavItem, ProductTitle, Logo } from "../../GlobalStyle";
-import { HeaderDiv, Div1, Div2, CartLogo } from "./HeaderStyle";
+import { HeaderDiv, Div1, Div2, CartLogo, ProfileImg } from "./HeaderStyle";
 import LogoImg from "../../assets/LOGO.png";
 import Cart from "../../assets/CARRINHO.png";
 import Profile from "../../assets/PROFILE.png";
@@ -18,7 +18,7 @@ export function Header() {
       </Div1>
       <Div2>
         <CartLogo src={Cart}/>
-        <img src={Profile} aria-hidden="true" />
+        <ProfileImg src={Profile} aria-hidden="true" />
       </Div2>
     </HeaderDiv>
   );
