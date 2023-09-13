@@ -17,11 +17,23 @@ import {
 } from "./BodyStyle";
 import Cart from "../../assets/CARRINHO.png";
 import { SliderImage } from "./Carrossel";
+import { useState } from "react";
 
 export function Body() {
+  const [count, setcount] = useState(0);
+
+  function increment() {
+    setcount(count + 1);
+  }
+  function decrement() {
+    if (count > 0) {
+      setcount(count - 1);
+    }
+  }
+
   return (
     <BodyDiv>
-        <SliderImage />
+      <SliderImage />
       <ProductInfoDiv>
         <MiniTitle>LIBRINI CELL STORE</MiniTitle>
         <ProductTitle>iPhone 14 Pro Max</ProductTitle>
@@ -32,15 +44,15 @@ export function Body() {
           nihil laborum vero ad earum omnis!
         </Paragraph>
         <ValuesDiv>
-          <ProductValue>R$ 9.879,99</ProductValue>
+          <ProductValue>$ 9.879,99</ProductValue>
           <ProductDescount>50%</ProductDescount>
         </ValuesDiv>
         <OriginalValue>R$ 19.759,98</OriginalValue>
         <GenericalDiv>
           <AddButton>
-            <MaxAndMinButton>-</MaxAndMinButton>
-            <ProductValue>0</ProductValue>
-            <MaxAndMinButton>+</MaxAndMinButton>
+            <MaxAndMinButton onClick={decrement}>-</MaxAndMinButton>
+            <ProductValue>{count}</ProductValue>
+            <MaxAndMinButton onClick={increment}>+</MaxAndMinButton>
           </AddButton>
           <AddToCartButton>
             <CartImgOfButton src={Cart} />

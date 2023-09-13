@@ -25,11 +25,25 @@ export const Div2 = styled.div`
   display: flex;
   gap: 3rem;
   align-items: center;
+  position: relative;
   justify-content: end;
 `;
 export const CartLogo = styled.img`
   width: 3rem;
   height: 3rem;
+`;
+export const ProductQnt = styled.span`
+  ${() => css`
+    position: absolute;
+    width: 2rem;
+    left: 16%;
+    top: 1.2rem;
+    font-size: 0.9rem;
+    text-align: center;
+    background-color: var(--cor-complement);
+    color: var(--cor-dark);
+    border-radius: 8rem;
+  `}
 `;
 
 export const ProfileImg = styled.img`
