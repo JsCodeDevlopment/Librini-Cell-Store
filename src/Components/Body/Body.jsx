@@ -17,9 +17,10 @@ import {
 } from "./BodyStyle";
 import Cart from "../../assets/CARRINHO.png";
 import { SliderImage } from "./Carrossel";
-import { useState } from "react";
+import React, { useState, useContext } from "react";
 
-export function Body() {
+
+export function BodyComponent() {
   const [count, setcount] = useState(0);
 
   function increment() {
@@ -32,34 +33,34 @@ export function Body() {
   }
 
   return (
-    <BodyDiv>
-      <SliderImage />
-      <ProductInfoDiv>
-        <MiniTitle>LIBRINI CELL STORE</MiniTitle>
-        <ProductTitle>iPhone 14 Pro Max</ProductTitle>
-        <Paragraph>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, quos
-          corporis inventore, ducimus neque corrupti laudantium, nesciunt
-          architecto modi asperiores mollitia exercitationem? Nostrum doloribus
-          nihil laborum vero ad earum omnis!
-        </Paragraph>
-        <ValuesDiv>
-          <ProductValue>$ 9.879,99</ProductValue>
-          <ProductDescount>50%</ProductDescount>
-        </ValuesDiv>
-        <OriginalValue>R$ 19.759,98</OriginalValue>
-        <GenericalDiv>
-          <AddButton>
-            <MaxAndMinButton onClick={decrement}>-</MaxAndMinButton>
-            <ProductValue>{count}</ProductValue>
-            <MaxAndMinButton onClick={increment}>+</MaxAndMinButton>
-          </AddButton>
-          <AddToCartButton>
-            <CartImgOfButton src={Cart} />
-            <AddToCartText>Add to cart</AddToCartText>
-          </AddToCartButton>
-        </GenericalDiv>
-      </ProductInfoDiv>
-    </BodyDiv>
+      <BodyDiv>
+        <SliderImage />
+        <ProductInfoDiv>
+          <MiniTitle>LIBRINI CELL STORE</MiniTitle>
+          <ProductTitle>iPhone 14 Pro Max</ProductTitle>
+          <Paragraph>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae,
+            quos corporis inventore, ducimus neque corrupti laudantium, nesciunt
+            architecto modi asperiores mollitia exercitationem? Nostrum
+            doloribus nihil laborum vero ad earum omnis!
+          </Paragraph>
+          <ValuesDiv>
+            <ProductValue>$ 9.879,99</ProductValue>
+            <ProductDescount>50%</ProductDescount>
+          </ValuesDiv>
+          <OriginalValue>R$ 19.759,98</OriginalValue>
+          <GenericalDiv>
+            <AddButton>
+              <MaxAndMinButton onClick={decrement}>-</MaxAndMinButton>
+              <ProductValue>{count}</ProductValue>
+              <MaxAndMinButton onClick={increment}>+</MaxAndMinButton>
+            </AddButton>
+            <AddToCartButton>
+              <CartImgOfButton src={Cart}  />
+              <AddToCartText>Add to cart</AddToCartText>
+            </AddToCartButton>
+          </GenericalDiv>
+        </ProductInfoDiv>
+      </BodyDiv>
   );
 }

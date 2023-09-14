@@ -57,13 +57,14 @@ export const OriginalValue = styled.p`
   color: var(--cor-text);
 `;
 export const AddToCartText = styled.p`
-  font-size: 1rem;
-  color: var(--cor-text);
+  font-size: 1.3rem;
+  color: var(--cor-dark);
 `;
 export const CartImgOfButton = styled.img`
   ${() => css`
     width: 2rem;
     height: 2rem;
+    filter: invert(100%);
   `}
 `;
 export const AddButton = styled.div`

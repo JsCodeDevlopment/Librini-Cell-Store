@@ -14,7 +14,7 @@ import {
   ProductDiv,
   ProductBuyInfo,
   ProductBuyPrice,
-  BtnSellDiv
+  BtnSellDiv,
 } from "./CartStyle";
 import LogoImg from "../../assets/LOGO.png";
 import Cart from "../../assets/CARRINHO.png";
@@ -24,6 +24,8 @@ import Trash from "../../assets/icon-delete.svg";
 import { AddToCartButton, AddToCartText } from "../Body/BodyStyle";
 
 export function Header() {
+
+
   return (
     <HeaderDiv>
       <Logo src={LogoImg} aria-hidden="true" />
@@ -55,13 +57,15 @@ export function Header() {
             <div>
               <ProductBuyInfo>iPhone 14 PRO MAX</ProductBuyInfo>
               <ProductBuyInfo>
-                $ 9.879,99 x 5 <ProductBuyPrice>$49.399,95</ProductBuyPrice>
+                $ 9.879,99 x 5 <ProductBuyPrice>$9.879,99</ProductBuyPrice>
               </ProductBuyInfo>
             </div>
             <img src={Trash} aria-hidden="true" />
           </ProductDiv>
           <BtnSellDiv>
-            <AddToCartButton><AddToCartText>Checkout</AddToCartText></AddToCartButton>
+            <AddToCartButton>
+              <AddToCartText>Checkout</AddToCartText>
+            </AddToCartButton>
           </BtnSellDiv>
         </CartDiv>
       </Div2>
