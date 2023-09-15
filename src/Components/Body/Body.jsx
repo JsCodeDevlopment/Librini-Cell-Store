@@ -17,21 +17,13 @@ import {
 } from "./BodyStyle";
 import Cart from "../../assets/CARRINHO.png";
 import { SliderImage } from "./Carrossel";
+import { CartContext, useCart } from "../../context/CartContext";
 import React, { useState, useContext } from "react";
 
 
 export function BodyComponent() {
-  const [count, setcount] = useState(0);
-
-  function increment() {
-    setcount(count + 1);
-  }
-  function decrement() {
-    if (count > 0) {
-      setcount(count - 1);
-    }
-  }
-
+  const { cartQnt, increment, decrement } = useCart()
+  
   return (
       <BodyDiv>
         <SliderImage />
@@ -52,7 +44,7 @@ export function BodyComponent() {
           <GenericalDiv>
             <AddButton>
               <MaxAndMinButton onClick={decrement}>-</MaxAndMinButton>
-              <ProductValue>{count}</ProductValue>
+              <ProductValue>{cartQnt}</ProductValue>
               <MaxAndMinButton onClick={increment}>+</MaxAndMinButton>
             </AddButton>
             <AddToCartButton>

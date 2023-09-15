@@ -22,9 +22,12 @@ import Profile from "../../assets/PROFILE.png";
 import Mini from "../../assets/PHONE3.png";
 import Trash from "../../assets/icon-delete.svg";
 import { AddToCartButton, AddToCartText } from "../Body/BodyStyle";
+import { useContext } from "react";
+import { CartContext, useCart } from "../../context/CartContext";
 
 export function Header() {
-
+  
+  const { cartQnt } = useCart()
 
   return (
     <HeaderDiv>
@@ -47,7 +50,7 @@ export function Header() {
         </NavItem>
       </Div1>
       <Div2>
-        <ProductQnt>5</ProductQnt>
+        <ProductQnt>{cartQnt}</ProductQnt>
         <CartLogo src={Cart} />
         <ProfileImg src={Profile} aria-hidden="true" />
         <CartDiv>
@@ -57,7 +60,7 @@ export function Header() {
             <div>
               <ProductBuyInfo>iPhone 14 PRO MAX</ProductBuyInfo>
               <ProductBuyInfo>
-                $ 9.879,99 x 5 <ProductBuyPrice>$9.879,99</ProductBuyPrice>
+                $ 9.879,99 x {cartQnt} <ProductBuyPrice>$49.399,95</ProductBuyPrice>
               </ProductBuyInfo>
             </div>
             <img src={Trash} aria-hidden="true" />

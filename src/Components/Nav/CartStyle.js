@@ -2,7 +2,7 @@ import styled, { css } from "styled-components";
 
 export const CartDiv = styled.div`
   ${() => css`
-    display: none;
+    display: flex;
     position: absolute;
     flex-direction: column;
     width: 32.5rem;
@@ -11,10 +11,9 @@ export const CartDiv = styled.div`
     z-index: 5;
     border-radius: 0.8rem;
     visibility: visible;
-    opacity: 1;
     background-color: var(--cor-text);
     gap: 1rem;
-    opacity: 0;
+    opacity: 1;
   `}
 `;
 export const CartTitle = styled.h1`

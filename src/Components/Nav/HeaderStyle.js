@@ -43,8 +43,8 @@ export const ProductQnt = styled.span`
     background-color: var(--cor-complement);
     color: var(--cor-dark);
     border-radius: 8rem;
-    display: none;
-    opacity: 0;
+    display: block;
+    opacity: 1;
   `}
 `;
 
