@@ -22,13 +22,16 @@ import Profile from "../../assets/PROFILE.png";
 import Mini from "../../assets/PHONE3.png";
 import Trash from "../../assets/icon-delete.svg";
 import { AddToCartButton, AddToCartText } from "../Body/BodyStyle";
-import { useContext } from "react";
-import { CartContext, useCart } from "../../context/CartContext";
+import { useCart } from "../../context/CartContext";
+import { useState } from "react";
 
 export function Header() {
-  
-  const { cartQnt } = useCart()
-
+  const { cartQnt, setCartQnt } = useCart();
+  const [showCart, setShowCart] = useState(false);
+  const deleteProduct = () => {
+    setCartQnt(0);
+    setShowCart(false);
+  };
   return (
     <HeaderDiv>
       <Logo src={LogoImg} aria-hidden="true" />
@@ -50,27 +53,35 @@ export function Header() {
         </NavItem>
       </Div1>
       <Div2>
-        <ProductQnt>{cartQnt}</ProductQnt>
-        <CartLogo src={Cart} />
+        {cartQnt > 0 && <ProductQnt>{cartQnt}</ProductQnt>}
+        <CartLogo src={Cart} onClick={() => setShowCart(!showCart)} />
         <ProfileImg src={Profile} aria-hidden="true" />
-        <CartDiv>
-          <CartTitle>Cart</CartTitle>
-          <ProductDiv>
-            <CartImg src={Mini} />
-            <div>
-              <ProductBuyInfo>iPhone 14 PRO MAX</ProductBuyInfo>
-              <ProductBuyInfo>
-                $ 9.879,99 x {cartQnt} <ProductBuyPrice>$49.399,95</ProductBuyPrice>
-              </ProductBuyInfo>
-            </div>
-            <img src={Trash} aria-hidden="true" />
-          </ProductDiv>
-          <BtnSellDiv>
-            <AddToCartButton>
-              <AddToCartText>Checkout</AddToCartText>
-            </AddToCartButton>
-          </BtnSellDiv>
-        </CartDiv>
+        {showCart && cartQnt > 0 && (
+          <CartDiv>
+            <CartTitle>Cart</CartTitle>
+            <ProductDiv>
+              <CartImg src={Mini} />
+              <div>
+                <ProductBuyInfo>iPhone 14 PRO MAX</ProductBuyInfo>
+                <ProductBuyInfo>
+                  $ 9.879,99 x {cartQnt}{" "}
+                  <ProductBuyPrice>
+                    {(cartQnt * 9879.99).toLocaleString("en-US", {
+                      style: "currency",
+                      currency: "USD",
+                    })}
+                  </ProductBuyPrice>
+                </ProductBuyInfo>
+              </div>
+              <img src={Trash} aria-hidden="true" onClick={deleteProduct} />
+            </ProductDiv>
+            <BtnSellDiv>
+              <AddToCartButton>
+                <AddToCartText>Checkout</AddToCartText>
+              </AddToCartButton>
+            </BtnSellDiv>
+          </CartDiv>
+        )}
       </Div2>
     </HeaderDiv>
   );
