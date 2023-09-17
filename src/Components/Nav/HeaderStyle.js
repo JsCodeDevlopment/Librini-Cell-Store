@@ -4,6 +4,8 @@ export const HeaderDiv = styled.div`
   ${() => css`
     display: flex;
     width: 100%;
+    
+    transition: all 0.5s ease-in-out 0s;
     background-color: var(--cor-dark);
     min-height: 10rem;
     padding: 0 20rem;

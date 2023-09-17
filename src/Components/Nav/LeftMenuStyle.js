@@ -23,6 +23,7 @@ export const Links = styled.li`
   ${() => css`
     position: relative;
     transition: all 0.5s ease-in-out 0s;
+    list-style-type: none;
   `}
 `;
 export const A = styled.a`
