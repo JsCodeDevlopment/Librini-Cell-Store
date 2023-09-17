@@ -30,7 +30,10 @@ export const ResetCSS = createGlobalStyle`
 `;
 export const Logo = styled.img`
   width: 7rem;
-  height: 7rem;
+  aspect-ratio : 1;
+  @media (max-width: 720px) {
+    width: 4rem;
+  }
 `;
 
 export const GenericalDiv = styled.div`

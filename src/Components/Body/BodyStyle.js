@@ -77,15 +77,15 @@ export const AddButton = styled.div`
     justify-content: space-around;
     border-radius: 1rem;
     background-color: var(--cor-text);
-    @media (max-width: 720px) {
-      width: 10rem;
-      height: 4rem;
+    @media (max-width: 800px) {
+      width: 21rem;
     }
   `}
 `;
 export const MaxAndMinButton = styled.h1`
   font-size: 3rem;
   color: var(--cor-complement);
+  cursor: pointer;
   user-select: none;
 `;
 export const AddToCartButton = styled.div`
@@ -101,10 +101,6 @@ export const AddToCartButton = styled.div`
     cursor: pointer;
     &:hover {
       transform: scale(1.1);
-    }
-    @media (max-width: 720px) {
-      width: 16rem;
-      height: 4rem;
     }
   `}
 `;

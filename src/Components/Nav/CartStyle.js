@@ -8,12 +8,16 @@ export const CartDiv = styled.div`
     width: 32.5rem;
     right: -1.5rem;
     top: 6rem;
-    z-index: 5;
+    z-index: 2;
     border-radius: 0.8rem;
     visibility: visible;
     background-color: var(--cor-text);
     gap: 1rem;
     opacity: 1;
+    @media (max-width:366px) {
+      right: -4rem;
+      width: 30rem;
+    }
   `}
 `;
 export const CartTitle = styled.h1`
@@ -31,6 +35,9 @@ export const ProductDiv = styled.div`
     width: 32.5rem;
     align-items: center;
     justify-content: space-between;
+    @media (max-width:366px) {
+      width: 30rem;
+    }
   `}
 `;
 export const ProductBuyInfo = styled.p`

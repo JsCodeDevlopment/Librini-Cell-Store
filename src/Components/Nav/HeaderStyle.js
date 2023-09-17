@@ -12,7 +12,8 @@ export const HeaderDiv = styled.div`
     justify-content: space-between;
     align-items: center;
     @media (max-width: 720px) {
-      padding: 10rem;
+      height: 5rem;
+      padding: 0 5rem;
     }
   `}
 `;
@@ -20,6 +21,9 @@ export const Div1 = styled.div`
   display: flex;
   gap: 1rem;
   flex-wrap: wrap;
+  @media (max-width: 982px) {
+    display: none;
+  }
 `;
 export const Div2 = styled.div`
   display: flex;
@@ -30,8 +34,11 @@ export const Div2 = styled.div`
 `;
 export const CartLogo = styled.img`
   width: 3rem;
-  height: 3rem;
+  aspect-ratio: 1;
   cursor: pointer;
+  @media (max-width: 720px) {
+    width: 1.5rem;
+  }
 `;
 export const ProductQnt = styled.span`
   ${() => css`
@@ -46,6 +53,10 @@ export const ProductQnt = styled.span`
     border-radius: 8rem;
     display: block;
     opacity: 1;
+    @media (max-width: 720px) {
+      top: 0.2rem;
+      width: 1.2rem;
+    }
   `}
 `;
 
@@ -53,10 +64,14 @@ export const ProfileImg = styled.img`
   ${() => css`
     border: solid 0.2rem transparent;
     border-radius: 100%;
+    aspect-ratio: 1;
     transition: ease-in-out 0.3s;
     &:hover {
       border-color: var(--cor-complement);
       cursor: pointer;
     }
+    @media (max-width: 720px) {
+    width: 3rem;
+  }
   `}
 `;

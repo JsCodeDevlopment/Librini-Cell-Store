@@ -16,8 +16,8 @@ import {
 } from "./BodyStyle";
 import Cart from "../../assets/CARRINHO.png";
 import { SliderImage } from "./Carrossel";
-import { CartContext, useCart } from "../../context/CartContext";
-import React, { useState, useContext } from "react";
+import { useCart } from "../../context/CartContext";
+import React, { useState } from "react";
 
 export function BodyComponent() {
   const { setCartQnt } = useCart();
