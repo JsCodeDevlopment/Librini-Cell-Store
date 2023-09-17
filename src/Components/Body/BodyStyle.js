@@ -43,6 +43,7 @@ export const ValuesDiv = styled.div`
 export const ProductValue = styled.h1`
   font-size: 2rem;
   color: var(--cor-dark);
+  user-select: none;
 `;
 export const ProductDescount = styled.span`
   padding: 0.5rem;
@@ -85,6 +86,7 @@ export const AddButton = styled.div`
 export const MaxAndMinButton = styled.h1`
   font-size: 3rem;
   color: var(--cor-complement);
+  user-select: none;
 `;
 export const AddToCartButton = styled.div`
   ${() => css`

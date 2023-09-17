@@ -25,6 +25,7 @@ export const ResetCSS = createGlobalStyle`
     color: var(--cor-text);
     font-family: Kumbh Sans;
     text-decoration: none;
+    user-select: none;
   }
 `;
 export const Logo = styled.img`

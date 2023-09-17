@@ -31,6 +31,7 @@ export const Div2 = styled.div`
 export const CartLogo = styled.img`
   width: 3rem;
   height: 3rem;
+  cursor: pointer;
 `;
 export const ProductQnt = styled.span`
   ${() => css`
