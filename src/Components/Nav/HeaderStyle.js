@@ -4,7 +4,6 @@ export const HeaderDiv = styled.div`
   ${() => css`
     display: flex;
     width: 100%;
-    
     transition: all 0.5s ease-in-out 0s;
     background-color: var(--cor-dark);
     min-height: 10rem;
@@ -16,6 +15,9 @@ export const HeaderDiv = styled.div`
     @media (max-width: 720px) {
       height: 5rem;
       padding: 0 5rem;
+    }
+    @media (max-width: 960px) {
+      padding: 0 6rem;
     }
   `}
 `;
@@ -39,7 +41,7 @@ export const CartLogo = styled.img`
   aspect-ratio: 1;
   cursor: pointer;
   @media (max-width: 720px) {
-    width: 1.5rem;
+    width: 2rem;
   }
 `;
 export const ProductQnt = styled.span`
@@ -73,7 +75,7 @@ export const ProfileImg = styled.img`
       cursor: pointer;
     }
     @media (max-width: 720px) {
-    width: 3rem;
+    width: 3.5rem;
   }
   `}
 `;

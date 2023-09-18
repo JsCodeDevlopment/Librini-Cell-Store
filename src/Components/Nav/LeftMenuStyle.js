@@ -24,6 +24,17 @@ export const Links = styled.li`
     position: relative;
     transition: all 0.5s ease-in-out 0s;
     list-style-type: none;
+    &:hover {
+      &:before {
+        content: "";
+        position: absolute;
+        top: -0.5rem;
+        left: 20.98rem;
+        width: 0.5rem;
+        height: 3rem;
+        background-color: var(--cor-complement);
+      }
+    }
   `}
 `;
 export const A = styled.a`
@@ -41,7 +52,7 @@ export const MnHamburguerImg = styled.img`
     position: absolute;
     z-index: 4;
     @media (max-width: 982px) {
-        display: block;
+      display: block;
     }
   `}
 `;

@@ -32,7 +32,7 @@ export const Logo = styled.img`
   width: 7rem;
   aspect-ratio : 1;
   @media (max-width: 720px) {
-    width: 4rem;
+    width: 4.5rem;
   }
 `;
 
